@@ -46,7 +46,9 @@ function MovieList({ onMovieSelect, setIsLoading, isLoading }) {
   return (
     <div className="movie-list">
       {isLoading ? (
-        <Loading message="Loading Movies..." />
+        <div className="loading-container">
+          <Loading />
+        </div>
       ) : (
         movies.map((movie) => (
           <MovieItem

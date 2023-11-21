@@ -7,6 +7,7 @@ import "./MovieList.css";
 function MovieList({ onMovieSelect }) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedMovieId, setSelectedMovieId] = useState(null);
 
   useEffect(() => {
     async function getMovies() {
@@ -37,6 +38,11 @@ function MovieList({ onMovieSelect }) {
     getMovies();
   }, []);
 
+  const handleMovieClick = (movie) => {
+    setSelectedMovieId(movie.episode_id);
+    onMovieSelect(movie);
+  };
+
   return (
     <div className="movie-list">
       {isLoading ? (
@@ -46,7 +52,8 @@ function MovieList({ onMovieSelect }) {
           <MovieItem
             key={movie.episode_id}
             movie={movie}
-            onMovieSelect={onMovieSelect}
+            onMovieSelect={handleMovieClick}
+            isSelected={selectedMovieId === movie.episode_id}
           />
         ))
       )}

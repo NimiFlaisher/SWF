@@ -7,6 +7,10 @@
     flex: 0 0 calc(16.66% - 20px);
   }
 
+  .movie-card:hover .movie-image {
+    transform: scale(1.1);
+  }
+  
   .movie-card-selected {
     border: 1px solid black;
   }

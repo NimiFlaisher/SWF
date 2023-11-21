@@ -54,3 +54,24 @@
     transform: rotate(360deg);
   }
 }
+
+.play-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  transform: scaleX(-1);
+}
+
+@media (max-width: 600px) {
+  .play-button {
+    top: 3%;
+    right: 8%;
+    font-size: 18px;
+  }
+
+}

@@ -12,9 +12,16 @@ function MovieDetails({ movie, onFavoriteToggle, favorites }) {
 
   if (!movie) return null;
 
+  const titleWords = movie.title.split(" ");
+
   return (
     <div className="movie-details">
       <div className="movie-image-container">
+        <div className="movie-title-overlay">
+          {titleWords.map((word, index) => (
+            <div key={index}>{word}</div>
+          ))}
+        </div>
         <img
           key={animationKey}
           src={movie.image_url}

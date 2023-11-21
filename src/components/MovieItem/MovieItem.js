@@ -9,6 +9,7 @@ function MovieItem({ movie, onMovieSelect }) {
       onClick={() => onMovieSelect(movie)}
     >
       <img src={movie.image_url} alt={movie.title} className="movie-image" />
+      <div className="movie-title">{movie.title}</div>
     </div>
   );
 }

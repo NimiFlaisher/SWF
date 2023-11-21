@@ -6,11 +6,30 @@
     overflow: hidden;
     flex: 0 0 calc(16.66% - 20px);
   }
-  
+
   .movie-image {
     width: 100%;
     height: auto;
     object-fit: cover;
     height: 400px;
     transition: transform 0.5s ease-in-out;
+  }
+
+  .movie-title {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    color: white;
+    text-align: center;
+    padding: 42px 0;
+    text-shadow:
+    -0.5px -0.5px 0 #000,  
+    0.5px -0.5px 0 #000,
+    -0.5px  0.5px 0 #000,
+    0.5px  0.5px 0 #000;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6979166666666667) 0%, rgba(0,0,0,0.6951155462184874) 20%, rgba(235,235,235,0.30015756302521013) 51%, rgba(255,255,255,0.30015756302521013) 100%);
+    -webkit-mask: linear-gradient(transparent, black 60%);
   }

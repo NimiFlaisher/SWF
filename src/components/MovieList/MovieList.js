@@ -4,13 +4,13 @@ import MovieItem from "@/components/MovieItem/MovieItem";
 import Loading from "@/components/Loading/Loading";
 import "./MovieList.css";
 
-function MovieList({ onMovieSelect }) {
+function MovieList({ onMovieSelect, setIsLoading, isLoading }) {
   const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [selectedMovieId, setSelectedMovieId] = useState(null);
 
   useEffect(() => {
     async function getMovies() {
+      setIsLoading(true);
       try {
         const data = await fetchMovies();
 
@@ -36,7 +36,7 @@ function MovieList({ onMovieSelect }) {
     }
 
     getMovies();
-  }, []);
+  }, [setIsLoading]);
 
   const handleMovieClick = (movie) => {
     setSelectedMovieId(movie.episode_id);

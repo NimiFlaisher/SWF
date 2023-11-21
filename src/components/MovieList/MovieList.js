@@ -13,6 +13,13 @@ function MovieList({ onMovieSelect }) {
       try {
         const data = await fetchMovies();
 
+        const sortOrder = [1, 4, 2, 3, 5, 6];
+
+        data.sort(
+          (a, b) =>
+            sortOrder.indexOf(a.episode_id) - sortOrder.indexOf(b.episode_id)
+        );
+
         const updatedMovies = data.map((movie) => {
           return {
             ...movie,

@@ -42,3 +42,34 @@
     text-shadow: 2.5px 2.5px 0 #000;
       line-height: 1;
   }
+
+  .movie-details-favorite-button {
+    position: absolute;
+    bottom: 55%;
+    left: 30%;
+    border: none;
+    background: transparent;
+    font-size: 36px; 
+    color: white;
+    cursor: pointer;
+    transform: rotate(15deg);
+  }
+  
+  .movie-details-favorite-button--active {
+    color: yellow;
+  }
+
+  .animate-star {
+    animation: spin 0.5s ease-in-out;
+    transform-origin: 50% 57%;
+  }
+
+  
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

@@ -19,4 +19,14 @@
     object-fit: cover;
     object-position: top center;
     border-radius: 20px;
+    animation: scrollImage 50s linear infinite;
+  }
+
+  @keyframes scrollImage {
+    0%, 100% {
+      object-position: top center;
+    }
+    50% {
+      object-position: bottom center;
+    }
   }

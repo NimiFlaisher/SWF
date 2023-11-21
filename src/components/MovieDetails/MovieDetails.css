@@ -73,3 +73,24 @@
       transform: rotate(360deg);
     }
   }
+
+  @media (max-width: 600px) {
+    .movie-details-image {
+      max-height: 300px;
+      animation: scrollImage 10s linear infinite;
+    }
+  
+    .movie-title-overlay {
+      font-size: 24px;
+    }
+  
+    .movie-details-favorite-button {
+      bottom: 55%;
+      left: 35%;
+      font-size: 24px;
+    }
+  
+    .movie-image-container {
+      max-height: 150px;
+    }
+  }
